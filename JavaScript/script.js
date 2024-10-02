@@ -1,0 +1,23 @@
+function updateTime(){
+let nairobiElement=document.querySelector("#nairobi");
+let nairobiDateElement=nairobiElement.querySelector(".date");
+let nairobiTimeElement=nairobiElement.querySelector(".time");
+let nairobiTime= moment().tz("Africa/Nairobi");
+
+nairobiDateElement.innerHTML=nairobiTime.format("MMMM Do ,YYYY");
+
+nairobiTimeElement.innerHTML=nairobiTime.format("h:mm:ss [<small>]A[<small/>]");
+
+
+let sydneyElement=document.querySelector("#sydney");
+let sydneyDateElement=sydneyElement.querySelector(".date");
+let sydneyTimeElement=sydneyElement.querySelector(".time");
+let sydneyTime= moment().tz("Australia/Sydney");
+
+sydneyDateElement.innerHTML=sydneyTime.format("MMMM Do ,YYYY");
+
+sydneyTimeElement.innerHTML=sydneyTime.format("h:mm:ss [<small>]A[<small/>]");
+};
+
+updateTime();
+setInterval(updateTime , 1000);
