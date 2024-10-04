@@ -1,4 +1,5 @@
 function updateTime(){
+    //nairobi
 let nairobiElement=document.querySelector("#nairobi");
 if(nairobiElement){
 let nairobiDateElement=nairobiElement.querySelector(".date");
@@ -10,7 +11,7 @@ nairobiDateElement.innerHTML=nairobiTime.format("MMMM Do ,YYYY");
 nairobiTimeElement.innerHTML=nairobiTime.format("h:mm:ss [<small>]A[<small/>]");
 }
 
-  
+  //sydney
 let sydneyElement=document.querySelector("#sydney");
 if(sydneyElement){
 let sydneyDateElement=sydneyElement.querySelector(".date");
@@ -46,5 +47,6 @@ citiesElement.innerHTML = `
 
 updateTime();
 setInterval(updateTime , 1000);
+
 let citiesSelect=document.querySelector("#city");
 citiesSelect.addEventListener("change", updateCity);
