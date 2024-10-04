@@ -1,10 +1,10 @@
 body{
-    background-color: aliceblue;
+    background-color: #eaf4fc;
     font-family: sans-serif;
 }
 .container{
     max-width: 600px;
-    background-color: antiquewhite;
+    background-color: #f7f0ff;
     margin: 60px auto;
     padding: 30px;
     width: 90%;
