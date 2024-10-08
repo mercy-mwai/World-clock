@@ -1,3 +1,16 @@
+function showCity(response){
+ let cityElement=document.querySelector("#city");
+ response.data.forEach(function (timezone) {
+  let opt = document.createElement("option");
+  opt.value = timezone; // Set the country code as the value
+  opt.textContent = timezone; // Set the country name as the option text
+  cityElement.appendChild(opt);
+});
+
+};
+let apiUrl="http://worldtimeapi.org/api/timezone";
+axios.get(apiUrl).then(showCity);
+
 function updateTime(){
     //nairobi
 let nairobiElement=document.querySelector("#nairobi");
@@ -20,7 +33,6 @@ let sydneyTime= moment().tz("Australia/Sydney");
 
 sydneyDateElement.innerHTML=sydneyTime.format("MMMM Do ,YYYY");
 
-sydneyTimeElement.innerHTML=sydneyTime.format("h:mm:ss [<small>]A[<small/>]");
 }
 };
 
