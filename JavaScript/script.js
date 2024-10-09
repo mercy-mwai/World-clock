@@ -1,10 +1,10 @@
 function showCity(response){
  let cityElement=document.querySelector("#city");
  response.data.forEach(function (timezone) {
-  let opt = document.createElement("option");
-  opt.value = timezone; // Set the country code as the value
-  opt.textContent = timezone; // Set the country name as the option text
-  cityElement.appendChild(opt);
+  let option = document.createElement("option");
+  option.value = timezone; 
+  option.textContent = timezone; 
+  cityElement.appendChild(option);
 });
 
 };
