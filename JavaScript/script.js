@@ -8,7 +8,7 @@ function showCity(response){
 });
 
 };
-let apiUrl="http://worldtimeapi.org/api/timezone";
+let apiUrl="https://worldtimeapi.org/api/timezone";
 axios.get(apiUrl).then(showCity);
 
 function updateTime(){
