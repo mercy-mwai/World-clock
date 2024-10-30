@@ -1,6 +1,6 @@
 function showCity(response){
  let cityElement=document.querySelector("#city");
- response.data.forEach(function (timezone) {
+  response.data.forEach(function (timezone) {
   let option = document.createElement("option");
   option.value = timezone; 
   option.textContent = timezone; 
